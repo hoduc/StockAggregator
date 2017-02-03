@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_stock_search"
+    tools:context="com.stockaggregator.StockSearch">
+
+    <AutoCompleteTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/autoCompleteTextView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="42dp"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CLEAR"
+        android:id="@+id/clearButton"
+        android:layout_below="@+id/autoCompleteTextView"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/ssLabel" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GET QUOTE"
+        android:id="@+id/quoteButton"
+        android:layout_alignBottom="@+id/clearButton"
+        android:layout_alignEnd="@+id/autoCompleteTextView"
+        android:layout_toEndOf="@+id/clearButton" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Auto Refresh"
+        android:id="@+id/autoRefreshSwitch"
+        android:layout_marginTop="65dp"
+        android:checked="false"
+        android:layout_below="@+id/clearButton"
+        android:layout_toEndOf="@+id/clearButton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="F5"
+        android:id="@+id/refresh"
+        android:layout_alignTop="@+id/autoRefreshSwitch"
+        android:layout_toEndOf="@+id/autoRefreshSwitch"
+        android:layout_alignBottom="@+id/autoRefreshSwitch" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Favorite"
+        android:id="@+id/favLabel"
+        android:layout_alignTop="@+id/autoRefreshSwitch"
+        android:layout_alignBottom="@+id/autoRefreshSwitch"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toStartOf="@+id/autoRefreshSwitch"
+        android:layout_below="@+id/autoRefreshSwitch"
+        android:layout_alignParentEnd="true">
+
+    </TableLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Stockname/Symbol"
+        android:id="@+id/ssLabel"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold" />
+
+</RelativeLayout>
